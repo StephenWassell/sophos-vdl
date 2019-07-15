@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "VDL",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#hash_line"
+		},
+		{
+			"include": "#at_line"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#string_patterns"
+		},
+		{
+			"include": "#hex_patterns"
+		}
+	],
+	"repository": {
+		"hex_patterns": {
+			"patterns": [{
+				"name": "keyword.other.vdl",
+				"match": "(^|\\s)[0-9a-f]+\\b"
+			}]
+		},
+		"string_patterns": {
+			"name": "keyword.other.vdl",
+			"begin": "'",
+			"end": "'"
+		},
+		"strings": {
+			"name": "string.quoted.double.vdl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vdl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.vdl",
+			"begin": ";",
+			"end": "\n"
+		},
+		"at_line": {
+			"name": "keyword.control.vdl",
+			"begin": "@",
+			"end": "\n"
+		},
+		"hash_line": {
+			"name": "markup.heading.vdl",
+			"begin": "#",
+			"end": "\n"
+		}
+	},
+	"scopeName": "source.vdl"
+}

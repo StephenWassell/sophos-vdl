@@ -1,0 +1,26 @@
+{
+    "name": "sophos-vdl",
+    "publisher": "stephenwassell",
+    "displayName": "Sophos VDL",
+    "description": "Sophos VDL syntax highlighting",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "vdl",
+            "aliases": ["VDL", "vdl"],
+            "extensions": [".dat"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "vdl",
+            "scopeName": "source.vdl",
+            "path": "./syntaxes/vdl.tmLanguage.json"
+        }]
+    }
+}
